@@ -1,20 +1,18 @@
-package com.practice.kyb;
+package com.test.chj.practice01;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import com.test.chj.practice01.domain.Student;
 
 public class Practice01 {
 
-  private static final Logger logger = LogManager.getLogger(Practice01.class);
-  
   public static void main(String[] args) {
     
-    ApplicationContext iocContainer =
+    ApplicationContext appCtx = 
         new AnnotationConfigApplicationContext(AppConfig.class);
-    
-    logger.info(iocContainer.getBean("student"));
+
+    Student obj = (Student) appCtx.getBean("student");
+    System.out.println(obj);
     
   }
 

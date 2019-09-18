@@ -8,12 +8,9 @@
 
 plugins {
     // Apply the java plugin to add support for Java
-    id 'java'
+    id 'war'
 
     // Apply the application plugin to add support for building a CLI application
-    id 'application'
-
-    id 'war'
     id 'eclipse-wtp'
 }
 
@@ -24,21 +21,16 @@ repositories {
 }
 
 dependencies {
+    // Spring IoC 컨테이너
+    compile group: 'org.springframework', name: 'spring-context', version: '5.1.9.RELEASE'
+    
+    // Spring webmvc
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.9.RELEASE'
+    
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:27.1-jre'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
-    
-    // Spring Context
-		compile group: 'org.springframework', name: 'spring-context', version: '5.1.9.RELEASE'
-
-		// Spring webmvc
-		compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.9.RELEASE'
-		
-		// Log4j-core
-		compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.12.1'
-		
-		
 }
 
