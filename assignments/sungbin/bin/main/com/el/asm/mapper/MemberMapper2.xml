@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.el.asm.practice2.dao.MemberDao">
+
+  <!--
+       아래의 select/insert/update/delete 등에서 사용할 resultMap을 설정
+    => 이 때 별명을 같이 지정하여 매칭시켜 줄 수 있다.
+    => column은 DB에서 쓰이는 이름, property는 domain에서 사용하는 이름
+    => id는 Primary Key에만 쓰이고 나머지는 전부 result로 매칭시킨다.
+  -->
+  <resultMap type="Member" id="MemberMap">
+    <id column="member_id" property="no"/>
+    <result column="cdt" property="registeredDate"/>
+  </resultMap>
+
+  <select id="findAll" resultMap="MemberMap">
+    select *
+    from lms_member
+  </select>
+  
+  <select id="findBy" parameterType="int" resultMap="MemberMap">
+    select *
+    from lms_member
+    where member_id=#{no}
+  </select>
+  
+  <insert id="insert" parameterType="Member">
+    insert into lms_member(name,email,pwd,cdt,tel,photo)
+    values(#{name},#{email},password(#{password}),now(),#{tel},#{photo})
+  </insert>
+  
+  <update id="update" parameterType="Member">
+    update lms_member
+    <set>
+      <if test="name != null">name=#{name},</if>
+      <if test="email != null">email=#{email},</if> 
+      <if test="password != null">pwd=password(#{password}), </if>
+      <if test="tel != null">tel=#{tel},</if>
+      <if test="photo != null">photo=#{photo}</if>
+    </set>
+    where member_id=#{no}
+  </update>
+  
+  <delete id="delete" parameterType="int">
+    delete from lms_member
+    where member_id=#{no}
+  </delete>
+  
+</mapper>
