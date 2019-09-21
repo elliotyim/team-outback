@@ -14,7 +14,6 @@ import org.springframework.context.annotation.Configuration;
 @MapperScan("com.el.asm.practice2.dao")
 @ComponentScan("com.el.asm.practice2")
 public class MybatisConfig {
-  
   @Bean
   public SqlSessionFactory sqlSessionFactory(
       DataSource dataSource, ApplicationContext appCtx) throws Exception {
