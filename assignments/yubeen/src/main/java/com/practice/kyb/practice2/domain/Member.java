@@ -2,7 +2,9 @@ package com.practice.kyb.practice2.domain;
 
 import java.io.Serializable;
 import java.sql.Date;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Member implements Serializable {
   private static final long serialVersionUID = 1L;
   

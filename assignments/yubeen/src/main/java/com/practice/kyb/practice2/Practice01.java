@@ -18,6 +18,8 @@ public class Practice01 {
 
     SqlSession sqlSession = sqlSessionFactory.openSession();
     
+    // Mybatis를 사용하여 직접 SqlSession으로 sql문을 실행할 때는
+    // [namespace.id]의 형태로 직접 namespace를 지정해서 매핑된 SQL문을 실행할 수 있다.
     List<Member> memberList = sqlSession.selectList("ohora.findAll");
     for (Member m : memberList) {
       System.out.println(m);
