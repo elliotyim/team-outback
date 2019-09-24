@@ -1,4 +1,4 @@
-package com.domain;
+package com.practice1.domain;
 
 import java.sql.Date;
 import org.springframework.stereotype.Component;

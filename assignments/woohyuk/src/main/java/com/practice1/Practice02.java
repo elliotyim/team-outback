@@ -1,4 +1,4 @@
-package com;
+package com.practice1;
 
 import java.lang.reflect.Method;
 import java.util.Collection;
@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.RequestMappingHandlerMapping.RequestHandler;
+import com.practice1.RequestMappingHandlerMapping.RequestHandler;
 
 public class Practice02 {
 
@@ -53,6 +53,7 @@ public class Practice02 {
         if(anno == null) {
           continue;
         }
+        System.out.println(anno.value()[0]+" "+obj+" "+m);
         mapping.addRequestHandler(anno.value()[0], obj, m);
       }
     }

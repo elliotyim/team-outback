@@ -1,11 +1,11 @@
-package com;
+package com.practice1;
 
 import java.sql.Date;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import com.domain.Student;
+import com.practice1.domain.Student;
 
 public class Practice01 {
   
