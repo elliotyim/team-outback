@@ -12,7 +12,7 @@ public class AppConfig {
     obj.setNo(1);
     obj.setName("김유빈");
     obj.setEmail("kyb@test.com");
-    obj.setRegisteredDate(Date.valueOf("2019-09-16"));
+    obj.setRegisteredDate(new Date(System.currentTimeMillis()));
     
     return obj;
   }
