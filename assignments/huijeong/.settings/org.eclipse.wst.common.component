@@ -2,7 +2,6 @@
 <project-modules id="moduleCoreId" project-version="1.5.0">
 	<wb-module deploy-name="huijeong">
 		<property name="context-root" value="huijeong"/>
-		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/resources"/>
 		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>
 	</wb-module>
 </project-modules>
