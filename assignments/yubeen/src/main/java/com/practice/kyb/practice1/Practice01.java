@@ -1,4 +1,4 @@
-package com.practice.kyb;
+package com.practice.kyb.practice1;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

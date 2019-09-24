@@ -1,4 +1,4 @@
-package com.practice.kyb.domain;
+package com.practice.kyb.practice1.domain;
 
 import java.sql.Date;
 import org.springframework.stereotype.Component;

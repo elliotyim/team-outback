@@ -1,4 +1,4 @@
-package com.practice.kyb;
+package com.practice.kyb.practice1;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
