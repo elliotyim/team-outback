@@ -1,4 +1,4 @@
-package com.domain;
+package com.practice1.domain;
 
 import java.util.Scanner;
 import org.springframework.stereotype.Component;
