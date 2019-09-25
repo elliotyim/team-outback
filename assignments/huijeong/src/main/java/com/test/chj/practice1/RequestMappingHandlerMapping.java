@@ -1,4 +1,4 @@
-package com.test.chj.practice01;
+package com.test.chj.practice1;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

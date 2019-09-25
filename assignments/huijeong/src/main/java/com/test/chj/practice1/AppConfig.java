@@ -1,8 +1,8 @@
-package com.test.chj.practice01;
+package com.test.chj.practice1;
 
 import java.sql.Date;
 import org.springframework.context.annotation.Bean;
-import com.test.chj.practice01.domain.Student;
+import com.test.chj.practice1.domain.Student;
 
 public class AppConfig {
   

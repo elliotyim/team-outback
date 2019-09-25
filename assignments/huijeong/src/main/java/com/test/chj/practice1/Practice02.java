@@ -1,4 +1,4 @@
-package com.test.chj.practice01;
+package com.test.chj.practice1;
 
 import java.lang.reflect.Method;
 import java.util.Collection;
@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.test.chj.practice01.RequestMappingHandlerMapping.RequestHandler;
+import com.test.chj.practice1.RequestMappingHandlerMapping.RequestHandler;
 
 public class Practice02 {
   

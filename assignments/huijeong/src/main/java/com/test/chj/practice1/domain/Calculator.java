@@ -1,4 +1,4 @@
-package com.test.chj.practice01.domain;
+package com.test.chj.practice1.domain;
 
 public class Calculator {
 
