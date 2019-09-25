@@ -1,11 +1,10 @@
-package com.domain;
+package com.practice.kyb.practice1.domain;
 
 import java.sql.Date;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Student {
-
   int no;
   String name;
   String email;

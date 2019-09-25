@@ -1,4 +1,4 @@
-package com.practice.kyb;
+package com.practice.kyb.practice1;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

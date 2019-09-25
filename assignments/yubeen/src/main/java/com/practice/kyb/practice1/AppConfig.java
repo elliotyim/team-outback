@@ -1,9 +1,9 @@
-package com.practice.kyb;
+package com.practice.kyb.practice1;
 
 import java.sql.Date;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import com.practice.kyb.domain.Student;
+import com.practice.kyb.practice1.domain.Student;
 
 @ComponentScan("com.practice.kyb")
 public class AppConfig {

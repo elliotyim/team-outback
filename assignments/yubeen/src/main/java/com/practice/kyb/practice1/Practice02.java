@@ -1,4 +1,4 @@
-package com;
+package com.practice.kyb.practice1;
 
 import java.lang.reflect.Method;
 import java.util.Collection;
@@ -8,21 +8,22 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.RequestMappingHandlerMapping.RequestHandler;
+import com.practice.kyb.practice1.RequestMappingHandlerMapping.RequestHandler;
 
 public class Practice02 {
 
-  public static void main(String[] args) throws Exception {
-    Scanner sc  = new Scanner(System.in);
-    ApplicationContext appCtx = new AnnotationConfigApplicationContext(AppConfig.class);
+  public static void main(String[] args) {
+    Scanner keyboard = new Scanner(System.in);
     
-    RequestMappingHandlerMapping mapping =
+    ApplicationContext appCtx = 
+        new AnnotationConfigApplicationContext(AppConfig.class);
+    
+    RequestMappingHandlerMapping mapping = 
         new RequestMappingHandlerMapping();
-
-    Map<String,Object> components = appCtx.getBeansWithAnnotation(Component.class);
-    Collection<Object> objList = components.values();
-
     
+    Map<String,Object> components = appCtx.getBeansWithAnnotation(Component.class);
+    
+    Collection<Object> objList = components.values();
     objList.forEach(obj -> {
 
       Method[] methods = null;
@@ -43,19 +44,23 @@ public class Practice02 {
       }
 
     });
-
+    
     System.out.println("계산 커맨드? ");
-    String command = sc.next();
-    System.out.printf("값1? ");
-    int n1 = sc.nextInt();
-    System.out.printf("값2? ");
-    int n2 = sc.nextInt();
+    String command = keyboard.nextLine();
+    System.out.println("값1? ");
+    int n1 = Integer.parseInt(keyboard.nextLine());
+    System.out.println("값2? ");
+    int n2 = Integer.parseInt(keyboard.nextLine());
+    
     RequestHandler requestHandler = mapping.getRequestHandler(command);
-
-    System.out.println("> " + 
-        requestHandler.method.invoke(requestHandler.bean, n1, n2));
-
- 
-    sc.close();
+    
+    try {
+      System.out.println("> " + 
+      requestHandler.method.invoke(requestHandler.bean, n1, n2));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    
+    keyboard.close();
   }
 }
