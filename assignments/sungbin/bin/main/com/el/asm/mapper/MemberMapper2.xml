@@ -47,5 +47,11 @@
     delete from lms_member
     where member_id=#{no}
   </delete>
+
+  <select id="findByEmailPassword" parameterType="hashMap" resultMap="MemberMap">
+    select *
+    from lms_member
+    where email=#{email} and pwd=password(#{password})
+  </select>
   
 </mapper>
