@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'application'
     
     id 'war'
     id 'eclipse-wtp'
@@ -21,9 +20,6 @@ dependencies {
     implementation 'com.google.guava:guava:28.0-jre'
     testImplementation 'junit:junit:4.12'
     
-    // Spring IoC 컨테이너
-    compile group: 'org.springframework', name: 'spring-context', version: '5.1.9.RELEASE'
-    
     // Spring Web MVC
     compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.9.RELEASE'
     
@@ -41,4 +37,7 @@ dependencies {
     
     // Mybatis-Spring
     compile group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.2'
+    
+    // Servlet API
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 }
