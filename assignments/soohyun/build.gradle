@@ -23,4 +23,17 @@ dependencies {
     // Log4j Core
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.12.1'
     
+    // MariaDB java client
+    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.4'
+    
+    // Mybatis
+    compile group: 'org.mybatis', name: 'mybatis', version: '3.5.2'
+    
+    // Spring-jdbc
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.9.RELEASE'
+    
+    // Mybatis-spring
+    compile group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.2'
+    
+    
 }
